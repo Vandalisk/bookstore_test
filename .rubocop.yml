@@ -1,0 +1,31 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.5.1
+  DisplayCopNames: true
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'public/**/*'
+    - 'Gemfile'
+
+Metrics/LineLength:
+  Max: 80
+  IgnoredPatterns: ['\A\s+#']
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/ExpandPathArguments:
+  Enabled: false
+Metrics/LineLength:
+  Max: 100
