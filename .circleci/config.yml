@@ -54,6 +54,7 @@ jobs:
                             --out /tmp/test-results/rspec.xml \
                             --format progress \
                             $TEST_FILES
+      - run:
           name: run rubocop
           command: bundle exec rubocop
 
