@@ -10,15 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_22_133938) do
+ActiveRecord::Schema.define(version: 2018_07_22_142252) do
+
+  create_table "book_copies", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_book_copies_on_book_id"
+    t.index ["shop_id"], name: "index_book_copies_on_shop_id"
+  end
 
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.decimal "price", precision: 5, scale: 2
-    t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_books_on_author_id"
+    t.string "author"
   end
 
   create_table "publishers", force: :cascade do |t|
